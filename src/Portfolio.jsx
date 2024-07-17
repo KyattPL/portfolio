@@ -11,7 +11,7 @@ const projects = [
     { id: 4, title: 'Project 4', image: '/portfolio/imgs/pog.png' },
 ];
 
-const skills = ['JavaScript', 'React', 'Node.js', 'Python', 'SQL', 'Tailwind'];
+const skills = ['JavaScript', 'React', 'Java', 'Python', 'Svelte', 'AI'];
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -46,7 +46,7 @@ const Portfolio = () => {
 
                 <div className="max-w-4xl mx-auto relative z-10">
                     {/* Dark Mode Toggle */}
-                    <div className="absolute top-4 right-4">
+                    <div className="relative text-center mb-2 sm:absolute sm:top-2 sm:right-2">
                         <button
                             onClick={toggleDarkMode}
                             className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
@@ -57,7 +57,7 @@ const Portfolio = () => {
 
                     <motion.header className="mb-16 text-center" {...fadeInUp}>
                         <h1 className="text-5xl font-bold mb-4 font-['Fira_Code']">Kajetan Pynka</h1>
-                        <p className="text-xl font-['Fira_Code']">Full-stack Developer & Tech Enthusiast</p>
+                        <p className="text-xl font-['Fira_Code']">Master's in Computer Science</p>
                     </motion.header>
 
                     <motion.section className="mb-16" {...fadeInUp}>
@@ -154,11 +154,35 @@ const Portfolio = () => {
                         </p>
                         <motion.a
                             href="mailto:kajetanossos1@gmail.com"
-                            className="inline-block bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            className="inline-block mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Email Me
+                            Email 📧
+                        </motion.a>
+                        <motion.a
+                            href="https://github.com/KyattPL"
+                            className="mr-2 inline-flex gap-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            GitHub <img width="16px" height="16px" src="/portfolio/imgs/github.svg" alt="GitHub icon" />
+                        </motion.a>
+                        <motion.a
+                            href="https://x.com/KyattPL"
+                            className="inline-flex gap-2 mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Twitter (X) <img width="16px" height="16px" src="/portfolio/imgs/twitter.svg" alt="Twitter or X icon" />
+                        </motion.a>
+                        <motion.a
+                            href="https://www.youtube.com/@kyatt_"
+                            className="inline-flex gap-2 mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Youtube <img width="16px" height="16px" src="/portfolio/imgs/yt.svg" alt="Youtube icon" />
                         </motion.a>
                     </motion.section>
                 </div>
