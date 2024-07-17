@@ -5,13 +5,13 @@ import Projects from './Projects';
 import PixelatedBackground from './PixelatedBackground';
 
 const projects = [
-    { id: 1, title: 'Project 1', image: '/portfolio/imgs/pog.png' },
-    { id: 2, title: 'Project 2', image: '/portfolio/imgs/pog.png' },
-    { id: 3, title: 'Project 3', image: '/portfolio/imgs/pog.png' },
-    { id: 4, title: 'Project 4', image: '/portfolio/imgs/pog.png' },
+    { id: 1, title: 'MeetApp', image: '/portfolio/imgs/pog.png' },
+    { id: 2, title: 'Master Thesis', image: '/portfolio/imgs/pog.png' },
+    { id: 3, title: 'Po Odznake', image: '/portfolio/imgs/pog.png' },
+    { id: 4, title: 'Microservices', image: '/portfolio/imgs/pog.png' },
 ];
 
-const skills = ['JavaScript', 'React', 'Java', 'Python', 'Svelte', 'AI'];
+const skills = ['JavaScript', 'React', 'Java', 'Python', 'Svelte', 'AI Tools'];
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -57,15 +57,16 @@ const Portfolio = () => {
 
                     <motion.header className="mb-16 text-center" {...fadeInUp}>
                         <h1 className="text-5xl font-bold mb-4 font-['Fira_Code']">Kajetan Pynka</h1>
-                        <p className="text-xl font-['Fira_Code']">Master's in Computer Science</p>
+                        <p className="text-xl font-['Fira_Code']">Master's Degree in Computer Science</p>
                     </motion.header>
 
                     <motion.section className="mb-16" {...fadeInUp}>
                         <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">About Me</h2>
                         <p className="text-lg leading-relaxed font-['Courier_Prime']">
-                            I'm a passionate developer with a keen eye for design and a love for creating
-                            efficient, scalable solutions. With expertise in various programming languages
-                            and frameworks, I bring ideas to life through code.
+                            Hello! I'm Kajetan "Kyatt" Pynka, a web developer with a Master's degree in Computer Science from Wrocław University of Science
+                            and Technology. Specializing in web development, I excel in creating dynamic, responsive, and user-friendly websites.
+                            With a strong background in both front-end and back-end development, I am passionate about delivering high-quality solutions.
+                            I love exploring new technologies and contributing to innovative projects.
                         </p>
                     </motion.section>
 
@@ -157,6 +158,7 @@ const Portfolio = () => {
                             className="inline-block mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            target="_blank"
                         >
                             Email 📧
                         </motion.a>
@@ -165,6 +167,7 @@ const Portfolio = () => {
                             className="mr-2 inline-flex gap-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            target="_blank"
                         >
                             GitHub <img width="16px" height="16px" src="/portfolio/imgs/github.svg" alt="GitHub icon" />
                         </motion.a>
@@ -173,6 +176,7 @@ const Portfolio = () => {
                             className="inline-flex gap-2 mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            target="_blank"
                         >
                             Twitter (X) <img width="16px" height="16px" src="/portfolio/imgs/twitter.svg" alt="Twitter or X icon" />
                         </motion.a>
@@ -181,6 +185,7 @@ const Portfolio = () => {
                             className="inline-flex gap-2 mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            target="_blank"
                         >
                             Youtube <img width="16px" height="16px" src="/portfolio/imgs/yt.svg" alt="Youtube icon" />
                         </motion.a>
