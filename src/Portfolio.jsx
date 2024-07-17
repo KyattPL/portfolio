@@ -11,7 +11,7 @@ const projects = [
     { id: 4, title: 'Project 4', image: '/portfolio/imgs/pog.png' },
 ];
 
-const skills = ['JavaScript', 'React', 'Node.js', 'Python', 'SQL', 'AWS'];
+const skills = ['JavaScript', 'React', 'Node.js', 'Python', 'SQL', 'Tailwind'];
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -55,13 +55,11 @@ const Portfolio = () => {
                         </button>
                     </div>
 
-                    {/* Header section */}
                     <motion.header className="mb-16 text-center" {...fadeInUp}>
-                        <h1 className="text-5xl font-bold mb-4 font-['Fira_Code']">John Doe</h1>
+                        <h1 className="text-5xl font-bold mb-4 font-['Fira_Code']">Kajetan Pynka</h1>
                         <p className="text-xl font-['Fira_Code']">Full-stack Developer & Tech Enthusiast</p>
                     </motion.header>
 
-                    {/* About Me section */}
                     <motion.section className="mb-16" {...fadeInUp}>
                         <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">About Me</h2>
                         <p className="text-lg leading-relaxed font-['Courier_Prime']">
@@ -71,7 +69,6 @@ const Portfolio = () => {
                         </p>
                     </motion.section>
 
-                    {/* Skills section */}
                     <motion.section className="mb-16" {...fadeInUp}>
                         <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Skills</h2>
                         <motion.ul className="grid grid-cols-2 sm:grid-cols-3 gap-4" variants={staggerChildren}>
@@ -88,17 +85,15 @@ const Portfolio = () => {
                         </motion.ul>
                     </motion.section>
 
-                    <Projects projects={projects} />
-
                     <motion.section className="mb-16" {...fadeInUp}>
-                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Work Experience</h2>
+                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Education & Courses</h2>
                         <div className="space-y-6">
                             <motion.div
                                 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
                                 whileHover={{ scale: 1.02 }}
                             >
-                                <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Senior Developer - Tech Innovators Inc.</h3>
-                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2020 - Present</p>
+                                <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Bachelor's Degree</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2019 - 2023</p>
                                 <ul className="list-disc list-inside space-y-2 font-['Courier_Prime']">
                                     <li>Led development of cloud-based SaaS platform</li>
                                     <li>Mentored junior developers and conducted code reviews</li>
@@ -109,8 +104,8 @@ const Portfolio = () => {
                                 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
                                 whileHover={{ scale: 1.02 }}
                             >
-                                <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Full-stack Developer - WebSolutions Co.</h3>
-                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2017 - 2020</p>
+                                <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Master's Degree</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2023 - 2024</p>
                                 <ul className="list-disc list-inside space-y-2 font-['Courier_Prime']">
                                     <li>Developed and maintained multiple client websites</li>
                                     <li>Integrated third-party APIs and payment gateways</li>
@@ -120,34 +115,34 @@ const Portfolio = () => {
                         </div>
                     </motion.section>
 
+                    <Projects projects={projects} />
+
                     <motion.section className="mb-16" {...fadeInUp}>
-                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Personal Interests</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Work Experience</h2>
+                        <div className="space-y-6">
                             <motion.div
-                                className="bg-white dark:bg-gray-800 p-6 rounded-lg text-gray-600 dark:text-gray-300"
-                                whileHover={{ scale: 1.05, rotate: -1 }}
+                                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+                                whileHover={{ scale: 1.02 }}
                             >
-                                <h3 className="text-xl font-semibold mb-3 font-['Fira_Code']">Open Source Contribution</h3>
-                                <p className="font-['Courier_Prime']">Actively contributing to React and Node.js ecosystems. Passionate about giving back to the community.</p>
-                            </motion.div>
-                            <motion.div
-                                className="bg-white dark:bg-gray-800 p-6 rounded-lg text-gray-600 dark:text-gray-300"
-                                whileHover={{ scale: 1.05, rotate: 1 }}
-                            >
-                                <h3 className="text-xl font-semibold mb-3 font-['Fira_Code']">Tech Blogging</h3>
-                                <p className="font-['Courier_Prime']">Writing about latest tech trends and sharing coding tips on my personal blog and Medium.</p>
+                                <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Python Developer Internship - Nokia</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2021/07 - 2021/09</p>
+                                <ul className="list-disc list-inside space-y-2 font-['Courier_Prime']">
+                                    <li>Led development of cloud-based SaaS platform</li>
+                                    <li>Mentored junior developers and conducted code reviews</li>
+                                    <li>Implemented CI/CD pipelines, improving deployment efficiency by 40%</li>
+                                </ul>
                             </motion.div>
                         </div>
                     </motion.section>
 
                     <motion.section className="mb-16" {...fadeInUp}>
-                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Fun Facts</h2>
+                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Hobbies</h2>
                         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg text-gray-600 dark:text-gray-300">
                             <ul className="space-y-4 font-['Courier_Prime']">
-                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>🎸 Plays guitar in a local indie band</motion.li>
-                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>🏃‍♂️ Completed two marathons</motion.li>
-                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>🌱 Passionate about sustainable living and tech</motion.li>
-                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>🎨 Enjoys creating pixel art in free time</motion.li>
+                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>🎸 Playing guitar (at least trying to)</motion.li>
+                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>💬 Learning languages (Spanish/Japanese are the main focus rn)</motion.li>
+                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>🎾 Sports (esp. Tennis) & E-sports (esp. LoL) fan</motion.li>
+                                <motion.li whileHover={{ scale: 1.02, x: 5 }}>😈 Metal concerts</motion.li>
                             </ul>
                         </div>
                     </motion.section>
@@ -155,10 +150,10 @@ const Portfolio = () => {
                     <motion.section {...fadeInUp}>
                         <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Contact</h2>
                         <p className="text-lg mb-4 font-['Courier_Prime']">
-                            I'm always open to new opportunities and collaborations. Feel free to reach out!
+                            Feel free to reach out!
                         </p>
                         <motion.a
-                            href="mailto:john.doe@example.com"
+                            href="mailto:kajetanossos1@gmail.com"
                             className="inline-block bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
