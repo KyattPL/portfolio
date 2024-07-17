@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+import Projects from './Projects';
+import PixelatedBackground from './PixelatedBackground';
+
 const projects = [
-    { id: 1, title: 'Project 1', image: '/imgs/pog.png' },
-    { id: 2, title: 'Project 2', image: '/imgs/pog.png' },
-    { id: 3, title: 'Project 3', image: '/imgs/pog.png' },
-    { id: 4, title: 'Project 4', image: '/imgs/pog.png' },
+    { id: 1, title: 'Project 1', image: '/portfolio/imgs/pog.png' },
+    { id: 2, title: 'Project 2', image: '/portfolio/imgs/pog.png' },
+    { id: 3, title: 'Project 3', image: '/portfolio/imgs/pog.png' },
+    { id: 4, title: 'Project 4', image: '/portfolio/imgs/pog.png' },
 ];
 
 const skills = ['JavaScript', 'React', 'Node.js', 'Python', 'SQL', 'AWS'];
@@ -21,8 +24,8 @@ const staggerChildren = {
 };
 
 const Portfolio = () => {
-    const [hoveredProject, setHoveredProject] = useState(null);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
     useEffect(() => {
         if (isDarkMode) {
@@ -35,46 +38,6 @@ const Portfolio = () => {
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
     };
-
-    const PixelatedBackground = () => {
-        const pixels = [];
-        const pixelSize = 20;
-        const numPixels = 50;
-
-        for (let i = 0; i < numPixels; i++) {
-            const leftPosition = Math.random() * 20;
-            const topPosition = Math.random() * 100;
-            pixels.push(
-                <div
-                    key={`left-${i}`}
-                    className="absolute bg-blue-300 dark:bg-blue-700"
-                    style={{
-                        left: `${leftPosition}%`,
-                        top: `${topPosition}%`,
-                        width: `${pixelSize}px`,
-                        height: `${pixelSize}px`,
-                        opacity: 0.1 + Math.random() * 0.2,
-                    }}
-                />
-            );
-            pixels.push(
-                <div
-                    key={`right-${i}`}
-                    className="absolute bg-emerald-300 dark:bg-emerald-700"
-                    style={{
-                        right: `${leftPosition}%`,
-                        top: `${topPosition}%`,
-                        width: `${pixelSize}px`,
-                        height: `${pixelSize}px`,
-                        opacity: 0.1 + Math.random() * 0.2,
-                    }}
-                />
-            );
-        }
-
-        return <div className="fixed inset-0 overflow-hidden pointer-events-none">{pixels}</div>;
-    };
-
 
     return (
         <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
@@ -125,37 +88,7 @@ const Portfolio = () => {
                         </motion.ul>
                     </motion.section>
 
-                    {/* Projects section */}
-                    <motion.section className="mb-16" {...fadeInUp}>
-                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Projects</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                            {projects.map((project) => (
-                                <motion.div
-                                    key={project.id}
-                                    className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer"
-                                    whileHover={{ scale: 1.03, rotate: 1, transition: { duration: 0.2 } }}
-                                    onHoverStart={() => setHoveredProject(project.id)}
-                                    onHoverEnd={() => setHoveredProject(null)}
-                                >
-                                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-                                    <div className="p-4">
-                                        <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 font-['Fira_Code']">{project.title}</h3>
-                                        <motion.p
-                                            className="text-sm mt-2 text-gray-600 dark:text-gray-300 font-['Courier_Prime']"
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={{
-                                                opacity: hoveredProject === project.id ? 1 : 0,
-                                                y: hoveredProject === project.id ? 0 : 10
-                                            }}
-                                            transition={{ duration: 0.2 }}
-                                        >
-                                            Click to view details
-                                        </motion.p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.section>
+                    <Projects projects={projects} />
 
                     <motion.section className="mb-16" {...fadeInUp}>
                         <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Work Experience</h2>
