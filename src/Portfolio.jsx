@@ -5,10 +5,10 @@ import Projects from './Projects';
 import PixelatedBackground from './PixelatedBackground';
 
 const projects = [
-    { id: 1, title: 'MeetApp', image: '/portfolio/imgs/pog.png' },
-    { id: 2, title: 'Master Thesis', image: '/portfolio/imgs/pog.png' },
-    { id: 3, title: 'Po Odznake', image: '/portfolio/imgs/pog.png' },
-    { id: 4, title: 'Microservices', image: '/portfolio/imgs/pog.png' },
+    { id: 1, title: 'MeetApp', image: '/portfolio/imgs/meetapp.png', url: 'https://github.com/KyattPL/MeetApp-GPS' },
+    { id: 2, title: 'Master Thesis', image: '/portfolio/imgs/thesis.png', url: 'https://github.com/KyattPL/masters-backup' },
+    { id: 3, title: 'Po Odznake', image: '/portfolio/imgs/po-odznake.png', url: 'https://github.com/KyattPL/Po-Odznake' },
+    { id: 4, title: 'Microservices', image: '/portfolio/imgs/isi-projekt.png', url: 'https://github.com/KyattPL/isi-projekt' },
 ];
 
 const skills = ['JavaScript', 'React', 'Java', 'Python', 'Svelte', 'AI Tools'];
@@ -63,10 +63,9 @@ const Portfolio = () => {
                     <motion.section className="mb-16" {...fadeInUp}>
                         <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">About Me</h2>
                         <p className="text-lg leading-relaxed font-['Courier_Prime']">
-                            Hello! I'm Kajetan "Kyatt" Pynka, a web developer with a Master's degree in Computer Science from Wrocław University of Science
+                            Hello! I'm Kajetan "Kyatt" Pynka, a graduate with a Master's degree in Computer Science from Wrocław University of Science
                             and Technology. Specializing in web development, I excel in creating dynamic, responsive, and user-friendly websites.
                             With a strong background in both front-end and back-end development, I am passionate about delivering high-quality solutions.
-                            I love exploring new technologies and contributing to innovative projects.
                         </p>
                     </motion.section>
 
@@ -87,7 +86,7 @@ const Portfolio = () => {
                     </motion.section>
 
                     <motion.section className="mb-16" {...fadeInUp}>
-                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Education & Courses</h2>
+                        <h2 className="text-3xl font-semibold mb-6 font-['Fira_Code']">Education & Important Courses</h2>
                         <div className="space-y-6">
                             <motion.div
                                 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
@@ -96,9 +95,19 @@ const Portfolio = () => {
                                 <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Bachelor's Degree</h3>
                                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2019 - 2023</p>
                                 <ul className="list-disc list-inside space-y-2 font-['Courier_Prime']">
-                                    <li>Led development of cloud-based SaaS platform</li>
-                                    <li>Mentored junior developers and conducted code reviews</li>
-                                    <li>Implemented CI/CD pipelines, improving deployment efficiency by 40%</li>
+                                    <li>Structural and Object-Oriented Programming</li>
+                                    <li>Maths: Algebra, Calculus, Logic, Statistics, Discrete Maths</li>
+                                    <li>Algorithms and Data Structured</li>
+                                    <li>Computer Architecture</li>
+                                    <li>Operating Systems</li>
+                                    <li>Computer Networks</li>
+                                    <li>Programming Paradigms</li>
+                                    <li>Linux system</li>
+                                    <li>Databases & Data Warehouses</li>
+                                    <li>Software Engineering & Planning</li>
+                                    <li>Mobile Apps / Multimedia / Web Dev</li>
+                                    <li>Internet of Things</li>
+                                    <li>Basics of Cybersecurity / AI / ML</li>
                                 </ul>
                             </motion.div>
                             <motion.div
@@ -108,9 +117,17 @@ const Portfolio = () => {
                                 <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Master's Degree</h3>
                                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2023 - 2024</p>
                                 <ul className="list-disc list-inside space-y-2 font-['Courier_Prime']">
-                                    <li>Developed and maintained multiple client websites</li>
-                                    <li>Integrated third-party APIs and payment gateways</li>
-                                    <li>Optimized database queries, improving site performance by 25%</li>
+                                    <li>Mobile systems</li>
+                                    <li>Game Development</li>
+                                    <li>Information systems design methodology</li>
+                                    <li>Semantic Web</li>
+                                    <li>Data Analysis</li>
+                                    <li>Computational Intelligence</li>
+                                    <li>IT project management</li>
+                                    <li>Multimedia</li>
+                                    <li>User Experience</li>
+                                    <li>Integration of IT systems</li>
+                                    <li>Business Intelligence</li>
                                 </ul>
                             </motion.div>
                         </div>
@@ -128,9 +145,9 @@ const Portfolio = () => {
                                 <h3 className="text-xl font-semibold mb-2 font-['Fira_Code']">Python Developer Internship - Nokia</h3>
                                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 font-['Courier_Prime']">2021/07 - 2021/09</p>
                                 <ul className="list-disc list-inside space-y-2 font-['Courier_Prime']">
-                                    <li>Led development of cloud-based SaaS platform</li>
-                                    <li>Mentored junior developers and conducted code reviews</li>
-                                    <li>Implemented CI/CD pipelines, improving deployment efficiency by 40%</li>
+                                    <li>Developed automated testing suites using Robot framework</li>
+                                    <li>Tracked issues and provided bug-fixes for a Kotlin app</li>
+                                    <li>Maintained libraries for a telecom system (CELL IDs etc.)</li>
                                 </ul>
                             </motion.div>
                         </div>
@@ -155,7 +172,7 @@ const Portfolio = () => {
                         </p>
                         <motion.a
                             href="mailto:kajetanossos1@gmail.com"
-                            className="inline-block mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            className="inline-block mr-2 mb-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             target="_blank"
@@ -164,7 +181,7 @@ const Portfolio = () => {
                         </motion.a>
                         <motion.a
                             href="https://github.com/KyattPL"
-                            className="mr-2 inline-flex gap-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            className="mr-2 mb-2 inline-flex gap-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             target="_blank"
@@ -173,7 +190,7 @@ const Portfolio = () => {
                         </motion.a>
                         <motion.a
                             href="https://x.com/KyattPL"
-                            className="inline-flex gap-2 mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            className="inline-flex gap-2 mr-2 mb-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             target="_blank"
@@ -182,7 +199,7 @@ const Portfolio = () => {
                         </motion.a>
                         <motion.a
                             href="https://www.youtube.com/@kyatt_"
-                            className="inline-flex gap-2 mr-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                            className="inline-flex gap-2 mr-2 mb-2 bg-blue-600 dark:bg-blue-500 text-white py-2 px-4 rounded-md font-['Fira_Code'] hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             target="_blank"

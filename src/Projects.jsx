@@ -22,6 +22,7 @@ const Projects = ({ projects }) => {
                         whileHover={{ scale: 1.03, rotate: 1, transition: { duration: 0.2 } }}
                         onHoverStart={() => setHoveredProject(project.id)}
                         onHoverEnd={() => setHoveredProject(null)}
+                        onClick={() => window.open(project.url, "_blank").focus()}
                     >
                         <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
                         <div className="p-4">
